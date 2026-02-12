@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <title>Campolina Advocacia • Estratégia Empresarial</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter + Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --deep-navy: #0c1c2c;
+      --warm-gold: #d4af37;
+      --gold-soft: #e6d7a0;
+      --off-white: #fbf9f5;
+      --pure-white: #ffffff;
+      --graphite: #3e4f5e;
+      --light-sand: #f0ede6;
+      --shadow-sm: 0 8px 30px rgba(0,0,0,0.04);
+      --shadow-md: 0 20px 40px -12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 30px 60px -15px rgba(0,0,0,0.15);
+      --border-radius-card: 28px;
+      --border-radius-btn: 60px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--off-white);
+      color: var(--deep-navy);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 32px;
+      }
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      margin-bottom: 1rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      color: var(--warm-gold);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid var(--warm-gold);
+      padding-bottom: 6px;
+    }
+
+    @media (min-width: 768px) {
+      .section-tag {
+        font-size: 0.85rem;
+        letter-spacing: 5px;
+      }
+    }
+
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem 2.5rem;
+        gap: 0;
+      }
+    }
+
+    .logo {
+      text-align: center;
+    }
+
+    .logo-main {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 4vw, 1.9rem);
+      font-weight: 600;
+      color: white;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+      line-height: 1.1;
+    }
+
+    .logo-main span {
+      color: var(--warm-gold);
+      font-style: italic;
+    }
+
+    .logo-sub {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,0.9);
+      margin-top: 4px;
+    }
+
+    @media (min-width: 768px) {
+      .logo-sub {
+        font-size: 0.7rem;
+        letter-spacing: 6px;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        gap: 1.8rem;
+      }
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.2);
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: var(--warm-gold);
+    }
+
+    .btn-whatsapp-nav {
+      background: #25D366;
+      color: white !important;
+      padding: 0.6rem 1.4rem !important;
+      border-radius: 60px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none !important;
+      font-size: 0.85rem !important;
+    }
+
+    .btn-whatsapp-nav i {
+      font-size: 1.1rem;
+    }
+
+    .btn-whatsapp-nav:hover {
+      background: #20b859 !important;
+      border-bottom: none !important;
+    }
+
+    @media (min-width: 768px) {
+      .btn-whatsapp-nav {
+        padding: 0.65rem 1.8rem !important;
+        font-size: 0.95rem !important;
+      }
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      padding: 100px 0 60px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      animation: slowZoom 24s infinite alternate ease-in-out;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(145deg, rgba(8,22,36,0.85) 0%, rgba(8,22,36,0.7) 100%);
+      z-index: 2;
+    }
+
+    @keyframes slowZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+
+    .hero-badge {
+      background: rgba(212, 175, 55, 0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: var(--warm-gold);
+      font-weight: 600;
+      font-size: 0.75rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-badge {
+        font-size: 0.9rem;
+        padding: 0.7rem 2rem;
+        letter-spacing: 3px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 8vw, 4.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    }
+
+    .hero-highlight {
+      color: var(--warm-gold);
+      border-bottom: 3px solid var(--warm-gold);
+      font-style: italic;
+    }
+
+    @media (min-width: 768px) {
+      .hero-highlight {
+        border-bottom-width: 5px;
+      }
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 4vw, 1.5rem);
+      font-weight: 350;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-hero {
+      background: var(--warm-gold);
+      color: var(--deep-navy);
+      padding: 0.9rem 2.2rem;
+      border-radius: 80px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.4);
+      transition: var(--transition);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .btn-hero i {
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: 768px) {
+      .btn-hero {
+        padding: 1.2rem 3.5rem;
+        font-size: 1.2rem;
+        gap: 14px;
+      }
+      .btn-hero i {
+        font-size: 1.5rem;
+      }
+    }
+
+    .btn-hero:hover {
+      background: #c4a037;
+      transform: translateY(-4px);
+      box-shadow: 0 30px 50px -16px black;
+    }
+
+    .differentials {
+      padding: 4rem 0 2rem;
+    }
+
+    .differentials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .differentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .differentials-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .diff-card {
+      background: var(--pure-white);
+      padding: 2rem 1.5rem;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+
+    .diff-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold-soft);
+    }
+
+    .diff-icon {
+      background: var(--off-white);
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      color: var(--warm-gold);
+      font-size: 1.8rem;
+    }
+
+    @media (min-width: 768px) {
+      .diff-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+      }
+    }
+
+    .diff-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    .risk-section {
+      background: var(--deep-navy);
+      color: white;
+      padding: 3rem 1.5rem;
+      border-radius: 40px;
+      margin: 2rem 0;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .risk-section {
+        padding: 4rem 3rem;
+        border-radius: 60px;
+        margin: 3rem 0;
+      }
+    }
+
+    .risk-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .risk-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .risk-left h2 {
+      color: white;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+
+    .risk-left p, .risk-right p {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      line-height: 1.6;
+    }
+
+    .risk-list {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .risk-list li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    }
+
+    .risk-list i {
+      color: var(--warm-gold);
+      font-size: 1.3rem;
+      margin-top: 2px;
+    }
+
+    .services {
+      padding: 5rem 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .service-card {
+      background: var(--pure-white);
+      padding: 2rem 1.8rem;
+      border-radius: 32px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+
+    .service-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-8px);
+    }
+
+    .service-icon {
+      background: rgba(212, 175, 55, 0.08);
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-icon i {
+      font-size: 1.8rem;
+      color: var(--warm-gold);
+    }
+
+    @media (min-width: 768px) {
+      .service-icon i {
+        font-size: 2.2rem;
+      }
+    }
+
+    .service-card h3 {
+      font-size: clamp(1.3rem, 3vw, 1.7rem);
+      font-weight: 650;
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      color: var(--graphite);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .about {
+      padding: 3rem 1.8rem;
+      background: var(--pure-white);
+      border-radius: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .about {
+        padding: 4rem 2.5rem;
+        border-radius: 60px;
+      }
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      line-height: 1.8;
+    }
+
+    .years-highlight {
+      display: inline-block;
+      background: var(--deep-navy);
+      color: var(--warm-gold);
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+      border: 2px solid var(--warm-gold);
+    }
+
+    @media (min-width: 768px) {
+      .years-highlight {
+        padding: 1rem 2.5rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+    }
+
+    .faq-item {
+      background: var(--pure-white);
+      padding: 1.8rem;
+      border-radius: 24px;
+      box-shadow: var(--shadow-sm);
+      border-left: 6px solid var(--warm-gold);
+    }
+
+    .contact-section {
+      background: linear-gradient(145deg, var(--warm-gold), #e6c35c);
+      padding: 3rem 1.8rem;
+      border-radius: 40px;
+      margin: 3rem 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (min-width: 768px) {
+      .contact-section {
+        padding: 4rem 3rem;
+        border-radius: 60px;
+        margin: 4rem 0;
+      }
+    }
+
+    .contact-content {
+      position: relative;
+      z-index: 5;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-icon {
+      font-size: 3rem;
+      color: var(--deep-navy);
+      margin-bottom: 1.2rem;
+      background: rgba(255,255,255,0.2);
+      padding: 1rem;
+      border-radius: 50%;
+    }
+
+    @media (min-width: 768px) {
+      .contact-icon {
+        font-size: 4rem;
+      }
+    }
+
+    .contact-section h2 {
+      color: var(--deep-navy);
+      font-size: clamp(1.6rem, 5vw, 2.5rem);
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 10px rgba(255,255,255,0.3);
+    }
+
+    .btn-whatsapp-footer {
+      background: var(--deep-navy);
+      color: white;
+      padding: 1rem 2.2rem;
+      border-radius: 80px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 1.5rem;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .btn-whatsapp-footer:hover {
+      background: #0a1a2a;
+      transform: scale(1.05);
+      border-color: white;
+    }
+
+    @media (min-width: 768px) {
+      .btn-whatsapp-footer {
+        padding: 1.3rem 3.5rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    .btn-whatsapp-footer i {
+      font-size: 1.3rem;
+    }
+
+    @media (min-width: 768px) {
+      .btn-whatsapp-footer i {
+        font-size: 1.6rem;
+      }
+    }
+
+    .footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--graphite);
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-main">Campolina<span>Advocacia</span></div>
+      <div class="logo-sub">EMPRESARIAL ESTRATÉGICO</div>
+    </div>
+    <div class="nav-links">
+      <a href="#atuacao">Atuação</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://wa.me/5511957933328" class="btn-whatsapp-nav" target="_blank">
+        <i class="fab fa-whatsapp"></i> <span>(11) 95793-3328</span>
+      </a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fas fa-shield"></i> PROTEÇÃO JURÍDICA ESTRATÉGICA</span>
+      <h1>Sua empresa precisa de <span class="hero-highlight">um advogado agora?</span></h1>
+      <p class="hero-sub">Auxiliamos empresários que buscam uma advocacia empresarial estratégica e desejam proteção jurídica para crescer com segurança.</p>
+      <a href="https://wa.me/5511957933328" class="btn-hero" target="_blank">
+        <i class="fab fa-whatsapp"></i> Falar com especialista
+      </a>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="differentials">
+      <span class="section-tag">NOSSOS DIFERENCIAIS</span>
+      <div class="differentials-grid">
+        <div class="diff-card">
+          <div class="diff-icon"><i class="fas fa-chart-line"></i></div>
+          <h4>Visão empresarial, não apenas jurídica</h4>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><i class="fas fa-user-tie"></i></div>
+          <h4>Especialistas capacitados e comprometidos</h4>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h4>Atendimento Online e Imediato</h4>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><i class="fas fa-coins"></i></div>
+          <h4>Foco em prevenção, economia e resultado</h4>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="container">
+    <section class="risk-section">
+      <div class="risk-grid">
+        <div class="risk-left">
+          <span class="section-tag" style="color: var(--warm-gold); border-bottom-color: var(--warm-gold);">RISCOS REAIS</span>
+          <h2>Sua empresa está exposta a riscos jurídicos todos os dias</h2>
+          <p>Contratos mal redigidos, conflitos societários, ações judiciais inesperadas, problemas com fornecedores, clientes ou parceiros…</p>
+        </div>
+        <div class="risk-right">
+          <p>A maioria dos empresários só procura um advogado quando o problema já virou prejuízo. Nosso escritório atua de forma preventiva e estratégica, ajudando empresas a:</p>
+          <ul class="risk-list">
+            <li><i class="fas fa-check-circle"></i> Evitar ações judiciais desnecessárias</li>
+            <li><i class="fas fa-check-circle"></i> Resolver conflitos com rapidez e técnica</li>
+            <li><i class="fas fa-check-circle"></i> Tomar decisões jurídicas seguras</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="atuacao" class="container">
+    <section class="services">
+      <span class="section-tag">ATUAÇÃO COMPLETA</span>
+      <h2>Atuação Jurídica para Empresas e Empresários</h2>
+      <p style="font-size: clamp(1rem, 3vw, 1.2rem); color: var(--graphite); max-width: 700px; margin-bottom: 2rem;">Atendemos empresas de diversos portes com respostas objetivas e soluções práticas, sem juridiquês.</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Consultoria Jurídica Empresarial</h3>
+          <p>Consultoria voltada a decisões pontuais e estratégicas, oferecendo análise de contratos, identificação de riscos jurídicos em negócios e investimentos, orientação preventiva e emissão de pareceres jurídicos claros, objetivos e direcionados à tomada de decisão segura.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3>Assessoria Jurídica Mensal</h3>
+          <p>Assessoria Jurídica Empresarial contínua, com suporte jurídico no dia a dia, análise e elaboração de contratos, orientação preventiva e redução de riscos jurídicos, garantindo mais previsibilidade e tranquilidade para a empresa.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-gavel"></i></div>
+          <h3>Contencioso e Defesas</h3>
+          <p>Atuação estratégica em processos judiciais e defesas empresariais. Representação em ações cíveis, trabalhistas, cobranças, conflitos contratuais e societários. Trabalhamos com técnica e firmeza para proteger seus interesses e buscar soluções eficazes, evitando prolongamento desnecessário de conflitos.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+          <h3>Documentos Empresariais</h3>
+          <p>Criação, revisão e adequação de contratos, notificações, termos, políticas internas e documentos estratégicos, garantindo segurança jurídica, clareza nas relações e proteção para a empresa.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="sobre" class="container">
+    <section class="about">
+      <div class="about-content">
+        <span class="section-tag">QUEM SOMOS</span>
+        <h2 style="margin-bottom: 1.5rem;">Estratégia, clareza e proteção</h2>
+        <p style="color: var(--graphite); line-height: 1.8; margin-bottom: 1.8rem;">
+          Somos um escritório de advocacia com atuação focada em empresas e empresários que precisam de soluções jurídicas claras, estratégicas e eficientes.
+        </p>
+        <p style="color: var(--deep-navy); line-height: 1.8; margin-bottom: 1.5rem;">
+          Atuamos ao lado do empresário na prevenção de riscos, na tomada de decisões jurídicas seguras e na resolução de demandas judiciais e extrajudiciais, sempre com uma visão prática e alinhada à realidade do negócio.
+        </p>
+        <p style="font-weight: 600; color: var(--deep-navy);">
+          Nosso trabalho vai além de "resolver problemas": estruturamos o jurídico da empresa para evitar prejuízos, reduzir passivos e dar segurança para crescer.
+        </p>
+        <div class="years-highlight">
+          <i class="fas fa-award"></i> +10 anos de atuação estratégica
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="faq" class="container">
+    <div style="margin: 3rem 0 1.5rem;">
+      <span class="section-tag">PERGUNTAS FREQUENTES</span>
+      <h2>Dúvidas comuns</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+          <i class="fas fa-circle-question" style="color: var(--warm-gold); font-size: 1.5rem;"></i>
+          <h4 style="font-size: 1.1rem;">Como funciona o primeiro contato?</h4>
+        </div>
+        <p>Ao clicar no botão do WhatsApp, você responderá algumas perguntas objetivas para entendermos sua demanda. Em seguida, será agendada uma consultoria estratégica ou reunião de apresentação de proposta.</p>
+      </div>
+      <div class="faq-item">
+        <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+          <i class="fas fa-circle-question" style="color: var(--warm-gold); font-size: 1.5rem;"></i>
+          <h4 style="font-size: 1.1rem;">Quem pode ser atendido?</h4>
+        </div>
+        <p>Atendemos empresas e empresários que possuem demandas jurídicas reais e viáveis, e que buscam orientação estratégica, consultoria ou atuação jurídica especializada.</p>
+      </div>
+      <div class="faq-item">
+        <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+          <i class="fas fa-circle-question" style="color: var(--warm-gold); font-size: 1.5rem;"></i>
+          <h4 style="font-size: 1.1rem;">Atuam apenas com consultoria?</h4>
+        </div>
+        <p>Não. Atuamos tanto em consultoria jurídica empresarial, assessoria jurídica mensal, quanto em processos judiciais e extrajudiciais (contencioso/defesas), conforme a necessidade da empresa.</p>
+      </div>
+      <div class="faq-item">
+        <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 0.8rem;">
+          <i class="fas fa-circle-question" style="color: var(--warm-gold); font-size: 1.5rem;"></i>
+          <h4 style="font-size: 1.1rem;">Quanto custa?</h4>
+        </div>
+        <p>Os valores variam conforme a demanda e o tipo de atuação. Realizamos uma triagem inicial e agendamos uma reunião para apresentar a solução mais adequada, com valores claros e alinhados ao seu caso.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <section class="contact-section">
+      <div class="contact-content">
+        <i class="fas fa-comments contact-icon"></i>
+        <h2>Atendimento rápido, estratégico e sem burocracia</h2>
+        <p style="font-size: clamp(1rem, 3vw, 1.3rem); margin: 1.2rem 0; color: var(--deep-navy); opacity: 0.9;">
+          • Atendimento online • Diagnóstico jurídico inicial • Orientação clara sobre riscos e soluções
+        </p>
+        <a href="https://wa.me/5511957933328" class="btn-whatsapp-footer" target="_blank">
+          <i class="fab fa-whatsapp"></i> Falar agora no WhatsApp
+        </a>
+        <p style="margin-top: 1.5rem; color: var(--deep-navy); font-size: 0.95rem; opacity: 0.85;">
+          Responderemos em breve. Sem compromisso.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div class="container">
+    <footer class="footer">
+      <p>&copy; 2026 Campolina Advocacia. Todos os direitos reservados.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Estratégia, clareza e proteção jurídica para sua empresa crescer.</p>
+    </footer>
+  </div>
+</body>
+</html>
